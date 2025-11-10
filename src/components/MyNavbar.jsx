@@ -50,7 +50,11 @@ function MyNavbar() {
       </div>
 
       <Container style={{ zIndex: 1, position: 'relative' }}>
-        <Navbar.Brand href="/">Signals Sounds and Waves</Navbar.Brand>
+        <Navbar.Brand href="/"><img
+          src="/Logo.png"
+          alt="Card image"
+          className="img-fluid float-end mb-3"
+        /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
