@@ -1,11 +1,67 @@
 import { Link } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    // Animate first row of cards with stagger
+    const firstRowCards = cardsRef.current.slice(0, 3);
+    gsap.fromTo(
+      firstRowCards,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: firstRowCards[0],
+          start: 'top 80%',
+          end: 'top 20%',
+          toggleActions: 'play none none none',
+        },
+      }
+    );
+
+    // Animate second row of cards with stagger
+    const secondRowCards = cardsRef.current.slice(3, 6);
+    gsap.fromTo(
+      secondRowCards,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: secondRowCards[0],
+          start: 'top 80%',
+          end: 'top 20%',
+          toggleActions: 'play none none none',
+        },
+      }
+    );
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+
   return (
     <div className="container my-5">
       {/* First row of cards */}
       <div className="row g-4">
-        <div className="col-md-4">
+        <div
+          className="col-md-4"
+          ref={(el) => (cardsRef.current[0] = el)}
+        >
           <div className="card h-100">
             <div className="card-body">
               <img
@@ -25,7 +81,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="col-md-4">
+        <div className="col-md-4" ref={(el) => (cardsRef.current[1] = el)}>
           <div className="card h-100">
             <div className="card-body">
               <h4 className="card-title">Why Signals Sounds And Waves?</h4>
@@ -38,7 +94,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="col-md-4">
+        <div className="col-md-4" ref={(el) => (cardsRef.current[2] = el)}>
           <div className="card h-100">
             <div className="card-body">
               <h4 className="card-title">Plugins!</h4>
@@ -56,7 +112,10 @@ function Home() {
 
       {/* Second row of cards */}
       <div className="row g-4">
-        <div className="col-md-4">
+        <div
+          className="col-md-4"
+          ref={(el) => (cardsRef.current[3] = el)}
+        >
           <div className="card h-100">
             <div className="card-body">
               <h4 className="card-title">Gaussian Splatting</h4>
@@ -69,7 +128,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="col-md-4">
+        <div className="col-md-4" ref={(el) => (cardsRef.current[4] = el)}>
           <div className="card h-100">
             <div className="card-body">
               <h4 className="card-title">What is a Gaussian Splat?</h4>
@@ -78,7 +137,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="col-md-4">
+        <div className="col-md-4" ref={(el) => (cardsRef.current[5] = el)}>
           <div className="card h-100">
             <div className="card-body">
               <h4 className="card-title">Splat-aloguing</h4>

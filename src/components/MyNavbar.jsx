@@ -3,10 +3,10 @@ import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import SineWave from './Sinewave';
+import FrequencySpectrum from './FrequencySpectrum';
 
 function MyNavbar() {
-  const navHeight = 70;
+  const navHeight = 120;
 
   useEffect(() => {
     gsap.fromTo(
@@ -33,23 +33,25 @@ function MyNavbar() {
         border: '1px solid black',
       }}
     >
-      {/* Animated Sine Waves Background */}
+      {/* Animated FFT Spectrum Background */}
       <div
         style={{
           position: 'absolute',
-          top: 0,
+          top: 40,
           left: 0,
           width: '100%',
           height: '100%',
           zIndex: 0,
         }}
       >
-        <SineWave color="rgba(109, 182, 206, 0.18)" amplitude={12} points={12} height={navHeight} />
-        <SineWave color="rgba(14, 59, 87, 0.16)" amplitude={30} points={14} height={navHeight} />
-        <SineWave color="rgba(17, 78, 82, 0.19)" amplitude={17} points={10} height={navHeight} />
+        <FrequencySpectrum
+          color="rgba(109, 182, 206, 0.8)"
+          height={navHeight}
+          barCount={128}
+        />
       </div>
 
-      <Container style={{ zIndex: 1, position: 'relative' }}>
+      <Container style={{ zIndex: 10, position: 'relative' }}>
         <Navbar.Brand href="/"><img
           src="/Logo.png"
           alt="Card image"
