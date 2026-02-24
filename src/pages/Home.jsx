@@ -143,7 +143,7 @@ function Home() {
               <h4 className="card-title">Splat-aloguing</h4>
               <p className="card-text">
                 <a
-                  href="https://splatology.myportfolio.com/splatalogue"
+                  href="https://vr-spark-splats.vercel.app/"
                   className="card-link"
                 >
                   Here
