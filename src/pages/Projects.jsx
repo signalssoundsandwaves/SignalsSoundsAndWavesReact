@@ -14,6 +14,7 @@ function Projects() {
       text: 'Working with Unit9,  I lead motion capture sessions to create unique animations for each rugby \'superfan\'. These were used in an interactive green screen experience and within a Spark AR application. A further set of animations were captured for a holographic presentation across the paris skyline for the rugby final.',
       image: 'RWC.png',
       imagePosition: 'float-start',
+      externalLink: { href: 'https://www.unit9.com/project/meta-rugby-world-cup-experience-2023', label: 'View project..' },
     },
     {
       title: 'Nike Air - Unit9/BBH Singapore',
@@ -26,6 +27,7 @@ function Projects() {
       text: 'I lead onsite QA for all aspects of the exhibition’s digital installation. This included an interactive table, projection mapping and an AR treasure hunt.',
       image: 'Anyang.png',
       imagePosition: 'float-start',
+      externalLink: { href: 'https://www.unit9.com/project/anyang-chinas-ancient-city-kings', label: 'View project..' },
     },
     {
       title: 'M&Ms Sweet Moves',

@@ -9,6 +9,7 @@ function Card({
   externalLink,
   customContent,
   cardRef,
+  imageStyle = {},
 }) {
   return (
     <div className="card h-100" ref={cardRef}>
@@ -18,6 +19,7 @@ function Card({
             src={image}
             alt={title}
             className={`img-fluid ${imagePosition} mb-3`}
+            style={imageStyle}
           />
         )}
         <h4 className="card-title">{title}</h4>

@@ -12,6 +12,8 @@ import Cv from './pages/Cv';
 import GaussianSplatting from './pages/GaussianSplatting';
 import DAFX from './pages/DAFX';
 import Projects from './pages/Projects';
+import Research from './pages/Research';
+import Personal from './pages/Personal';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
         <Route path="/GaussianSplatting" element={<GaussianSplatting />} />
         <Route path="/DAFX" element={<DAFX />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/research" element={<Research />} />
+        <Route path="/personal" element={<Personal />} />
       </Routes>
       <Footer />
     </Router>

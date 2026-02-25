@@ -53,10 +53,12 @@ function Home() {
     {
       title: 'Research Projects',
       text: 'My research experience includes developing ecoacoustics measurement systems and exploring innovative applications of dry electrode EEG technology.',
+      link: { to: '/research', label: 'View projects..' },
     },
     {
-      title: 'Additional Personal Projects',
+      title: 'Personal Projects',
       text: 'I pursue ongoing projects in Audio, Web development and 3D graphics, combining creative problem-solving with technical exploration.',
+      link: { to: '/personal', label: 'View personal projects..' },
     },
   ];
 
