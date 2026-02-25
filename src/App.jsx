@@ -11,6 +11,7 @@ import Plugins from './pages/Plugins';
 import Cv from './pages/Cv';
 import GaussianSplatting from './pages/GaussianSplatting';
 import DAFX from './pages/DAFX';
+import Projects from './pages/Projects';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/Cv" element={<Cv />} />
         <Route path="/GaussianSplatting" element={<GaussianSplatting />} />
         <Route path="/DAFX" element={<DAFX />} />
+        <Route path="/projects" element={<Projects />} />
       </Routes>
       <Footer />
     </Router>

@@ -1,12 +1,64 @@
-import { Link } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Card from '../components/Card';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
   const cardsRef = useRef([]);
+
+  const firstRowCards = [
+    {
+      title: 'About Signals Sounds And Waves',
+      text: 'Signals, Sounds and Waves is written by me, William Eden. At university I completed a degree in Sound Engineering and Production and achieved a 1st; since then I have worked across a variety of different media. I felt that a website could act as a portfolio for some of the work I have done and would be a good way of solidifying some of the concepts I have learnt. I hope this to be an informative and intuitive read.',
+      image: '/wim_linkedin.jpeg',
+      link: { to: '/Cv', label: 'My CV..' },
+    },
+    {
+      title: 'Why Signals Sounds And Waves?',
+      text: 'Signals, Sounds and Waves — sounds snappy right? Well, there\'s more to it than that. Here I\'ll talk about what the terms mean in the context of a typical recording setup, and link to lots of useful information.',
+      link: { to: '/Why', label: 'Read more..' },
+    },
+    {
+      title: 'Plugins!',
+      text: 'Here you will find various plugins that I have developed. Please download and enjoy — any feedback or QA is much appreciated.',
+      link: { to: '/Plugins', label: 'Read more..' },
+    },
+  ];
+
+  const secondRowCards = [
+    {
+      title: 'Gaussian Splatting',
+      image: '/Gaussian.png',
+      imagePosition: 'float-end',
+    },
+    {
+      title: 'What is a Gaussian Splat?',
+      link: { to: '/GaussianSplatting', label: 'Read more..' },
+    },
+    {
+      title: 'Splat-aloguing',
+      text: 'Here you will find collections that I have splatted.',
+      externalLink: { href: 'https://vr-spark-splats.vercel.app/', label: 'Here' },
+    },
+  ];
+
+  const thirdRowCards = [
+    {
+      title: 'Commercial Projects',
+      text: 'I have contributed to various commercial projects as both a hardware developer and QA engineer, ensuring quality and reliability across diverse applications.',
+      link: { to: '/projects', label: 'View projects..' },
+    },
+    {
+      title: 'Research Projects',
+      text: 'My research experience includes developing ecoacoustics measurement systems and exploring innovative applications of dry electrode EEG technology.',
+    },
+    {
+      title: 'Additional Personal Projects',
+      text: 'I pursue ongoing projects in Audio, Web development and 3D graphics, combining creative problem-solving with technical exploration.',
+    },
+  ];
 
   useEffect(() => {
     // Animate first row of cards with stagger
@@ -49,6 +101,26 @@ function Home() {
       }
     );
 
+    // Animate third row of cards with stagger
+    const thirdRowCards = cardsRef.current.slice(6, 9);
+    gsap.fromTo(
+      thirdRowCards,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: thirdRowCards[0],
+          start: 'top 80%',
+          end: 'top 20%',
+          toggleActions: 'play none none none',
+        },
+      }
+    );
+
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
@@ -58,53 +130,14 @@ function Home() {
     <div className="container my-5">
       {/* First row of cards */}
       <div className="row g-4">
-        <div
-          className="col-md-4"
-          ref={(el) => (cardsRef.current[0] = el)}
-        >
-          <div className="card h-100">
-            <div className="card-body">
-              <img
-                src="/wim_linkedin.jpeg"
-                alt="Card image"
-                className="img-fluid float-end mb-3"
-              />
-              <h4 className="card-title">About Signals Sounds And Waves</h4>
-              <p className="card-text">
-                Signals, Sounds and Waves is written by me, William Eden. At university I completed a degree in Sound
-                Engineering and Production and achieved a 1st; since then I have worked across a variety of different media.
-                I felt that a website could act as a portfolio for some of the work I have done and would be a good way of
-                solidifying some of the concepts I have learnt. I hope this to be an informative and intuitive read.
-              </p>
-              <Link to="/Cv" className="card-link">My CV..</Link>
-            </div>
+        {firstRowCards.map((cardData, index) => (
+          <div className="col-md-4" key={index}>
+            <Card
+              {...cardData}
+              cardRef={(el) => (cardsRef.current[index] = el)}
+            />
           </div>
-        </div>
-
-        <div className="col-md-4" ref={(el) => (cardsRef.current[1] = el)}>
-          <div className="card h-100">
-            <div className="card-body">
-              <h4 className="card-title">Why Signals Sounds And Waves?</h4>
-              <p className="card-text">
-                Signals, Sounds and Waves — sounds snappy right? Well, there's more to it than that. Here I'll talk about
-                what the terms mean in the context of a typical recording setup, and link to lots of useful information.
-              </p>
-              <Link to="/Why" className="card-link">Read more..</Link>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-md-4" ref={(el) => (cardsRef.current[2] = el)}>
-          <div className="card h-100">
-            <div className="card-body">
-              <h4 className="card-title">Plugins!</h4>
-              <p className="card-text">
-                Here you will find various plugins that I have developed. Please download and enjoy — any feedback or QA is much appreciated.
-              </p>
-              <Link to="/Plugins" className="card-link">Read more..</Link>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
 
       {/* Spacer */}
@@ -112,47 +145,29 @@ function Home() {
 
       {/* Second row of cards */}
       <div className="row g-4">
-        <div
-          className="col-md-4"
-          ref={(el) => (cardsRef.current[3] = el)}
-        >
-          <div className="card h-100">
-            <div className="card-body">
-              <h4 className="card-title">Gaussian Splatting</h4>
-              <img
-                src="/Gaussian.png"
-                alt="Card image"
-                className="img-fluid float-end mb-3"
-              />
-            </div>
+        {secondRowCards.map((cardData, index) => (
+          <div className="col-md-4" key={index}>
+            <Card
+              {...cardData}
+              cardRef={(el) => (cardsRef.current[3 + index] = el)}
+            />
           </div>
-        </div>
+        ))}
+      </div>
 
-        <div className="col-md-4" ref={(el) => (cardsRef.current[4] = el)}>
-          <div className="card h-100">
-            <div className="card-body">
-              <h4 className="card-title">What is a Gaussian Splat?</h4>
-              <Link to="/GaussianSplatting" className="card-link">Read more..</Link>
-            </div>
-          </div>
-        </div>
+      {/* Spacer */}
+      <div className="my-5"></div>
 
-        <div className="col-md-4" ref={(el) => (cardsRef.current[5] = el)}>
-          <div className="card h-100">
-            <div className="card-body">
-              <h4 className="card-title">Splat-aloguing</h4>
-              <p className="card-text">
-                <a
-                  href="https://vr-spark-splats.vercel.app/"
-                  className="card-link"
-                >
-                  Here
-                </a>{' '}
-                you will find collections that I have splatted.
-              </p>
-            </div>
+      {/* Third row of cards */}
+      <div className="row g-4">
+        {thirdRowCards.map((cardData, index) => (
+          <div className="col-md-4" key={index}>
+            <Card
+              {...cardData}
+              cardRef={(el) => (cardsRef.current[6 + index] = el)}
+            />
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
