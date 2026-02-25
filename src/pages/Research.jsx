@@ -11,14 +11,14 @@ function Research() {
 	const researchCards = [
 		{
 			title: 'The Sound of Soil',
-			text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.',
+			text: 'In this project we created a fully functional prototype for a low cost, open source ecoacoustics measurement system. The project required a good understanding of analog and digital signal processing techniques, embedded development, electronics, and novel research in the field of eco-acoustics.',
             image: '/Fork1.JPG',
             imagePosition: 'float-end',
             imageStyle: { maxWidth: '200px', height: 'auto' },
         },
 		{
 			title: 'Creative applications for dry electrode EEG and VR applications',
-			text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+			text: 'I worked alongside a team of researchers to explore novel applications for dry electrode EEG in virtual reality environments.',
             image: '/EEG1.jpeg',
             imagePosition: 'float-start',
 		},

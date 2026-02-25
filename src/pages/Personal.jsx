@@ -17,6 +17,8 @@ function Personal() {
     {
       title: 'Electronics and Embedded Projects',
       text: 'I am currently working on a guitar pedal based on the classic bazz fuzz design.',
+      image: '/bazzfuss.png',
+      imagePosition: 'float-end',
     },
   ];
 
