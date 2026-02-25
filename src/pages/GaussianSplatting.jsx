@@ -71,7 +71,7 @@ function GaussianSplatting() {
               This approach is <em>image-centric</em>: it loops over pixels first, then searches for geometry.
               <br /><br />
               Rasterization is extremely fast and ideal for real-time graphics.
-              Ray tracing is more physically accurate but computationally expensive.
+              Ray tracing is more physically accurate but computationally expensive. If you have ever used blender think of Eevee render engine (raster) versus Cycles render engine (ray tracing). Ray tracing is more commonly used for offline rendering, such as in movies or high-quality stills.
               <br /><br />
               The following{" "}
               <a href="https://www.scratchapixel.com/lessons/3d-basic-rendering/rasterization-practical-implementation/overview-rasterization-algorithm.html">
