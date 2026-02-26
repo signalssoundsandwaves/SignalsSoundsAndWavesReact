@@ -15,10 +15,33 @@ function Plugins(){
                             To create your own, check out the course <a href="https://www.kadenze.com/courses/advanced-audio-plugin-development/info"> Advanced Audio Plugin Development at Kadenze Academy. </a> 
                             <br />
                             <br />
-                            <img src="RawkusRawray.png" className="img-fluid" />
+                            <img src="RawkusRawray.png" className="img-fluid mx-auto d-block w-50 h-auto" />
                         </p>
                         <p className="lead">
                           <a className="btn btn-primary btn-lg" href="RAWKUSRAWRAY.vst3" download role="button">Download VST3</a>
+                        </p>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+        <div className="card-deck mx-auto">
+
+            <div className="card">
+                <div className="card-body">
+                    <div className="jumbotron">
+                        <h1 className="display-4">White Box Compressor</h1>
+                        <p className="lead">A compressor plugin with a unique white box design</p>
+                        <hr className="my-4" />
+                        <p>
+                            <br />
+                            To create your own, check out the course <a href="https://www.kadenze.com/courses/advanced-audio-plugin-development/info"> Advanced Audio Plugin Development at Kadenze Academy. </a> 
+                            <br />
+                            <br />
+                            <img src="WhiteBox-Compressor.png" className="img-fluid mx-auto d-block w-50 h-auto" />
+                        </p>
+                        <p className="lead">
+                          <a className="btn btn-primary btn-lg" href="WhiteBox Compressor.vst3" download role="button">Download VST3</a>
                         </p>
                       </div>
                 </div>
