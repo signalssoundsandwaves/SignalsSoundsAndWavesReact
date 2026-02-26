@@ -35,9 +35,6 @@ function Plugins(){
                         <hr className="my-4" />
                         <p>
                             <br />
-                            To create your own, check out the course <a href="https://www.kadenze.com/courses/advanced-audio-plugin-development/info"> Advanced Audio Plugin Development at Kadenze Academy. </a> 
-                            <br />
-                            <br />
                             <img src="WhiteBox-Compressor.png" className="img-fluid mx-auto d-block w-50 h-auto" />
                         </p>
                         <p className="lead">
