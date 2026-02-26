@@ -11,7 +11,7 @@ function Home() {
   const firstRowCards = [
     {
       title: 'About Signals Sounds And Waves',
-      text: 'Signals, Sounds and Waves is written by me, William Eden. At university I completed a degree in Sound Engineering and Production and achieved a 1st; since then I have worked across a variety of different media. I felt that a website could act as a portfolio for some of the work I have done and would be a good way of solidifying some of the concepts I have learnt. I hope this to be an informative and intuitive read.',
+      text: 'Signals, Sounds and Waves is a project by William Eden. I hold a First-Class degree in Sound Engineering and Production and have since worked across a range of media disciplines. This website serves as both a portfolio of selected work and a platform to explore and refine the concepts I’ve developed throughout my studies and professional practice. I hope you find it clear, engaging, and informative.',
       image: '/wim_linkedin.jpeg',
       link: { to: '/Cv', label: 'My CV..' },
     },
