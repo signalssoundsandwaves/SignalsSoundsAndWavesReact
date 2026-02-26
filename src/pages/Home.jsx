@@ -39,7 +39,7 @@ function Home() {
     },
     {
       title: 'Splat-aloguing',
-      text: 'Here you will find collections that I have splatted.',
+      text: 'Here you will find a collection of gaussian splats (use the arrow keys and space bar to cycle the splats, also viewable in VR).',
       externalLink: { href: 'https://vr-spark-splats.vercel.app/', label: 'Here' },
     },
   ];
