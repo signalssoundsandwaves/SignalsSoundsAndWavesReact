@@ -125,8 +125,7 @@ function Why() {
                   </figcaption>
                 </figure>
                 <p>
-                  In mathematics and engineering, signals are often represented as sine waves,
-                  where the x-axis represents time and the y-axis represents amplitude.
+                  The simplest signal is a sine wave, the x-axis represents time and the y-axis represents amplitude.
                 </p>
                 <p>
                   An <cite>analog</cite> signal is continuous in both time and amplitude.
