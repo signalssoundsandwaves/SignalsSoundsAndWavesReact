@@ -1,5 +1,5 @@
 // App.jsx
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, HashRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
@@ -25,22 +25,24 @@ function App() {
       <ScrollToTop />
       <CursorRadar />
       <MyNavbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Blog" element={<Blog />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/SignalsSoundsWaves" element={<SignalsSoundsWaves />} />
-        <Route path="/Plugins" element={<Plugins />} />
-        <Route path="/Cv" element={<Cv />} />
-        <Route path="/GaussianSplatting" element={<GaussianSplatting />} />
-        <Route path="/DAFX" element={<DAFX />} />
-        <Route path="/DSP" element={<DSP />} />
-        <Route path="/FFT" element={<FFT />} />
-        <Route path="/Ztransform" element={<Ztransform />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/research" element={<Research />} />
-        <Route path="/personal" element={<Personal />} />
-      </Routes>
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Blog" element={<Blog />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/SignalsSoundsWaves" element={<SignalsSoundsWaves />} />
+          <Route path="/Plugins" element={<Plugins />} />
+          <Route path="/Cv" element={<Cv />} />
+          <Route path="/GaussianSplatting" element={<GaussianSplatting />} />
+          <Route path="/DAFX" element={<DAFX />} />
+          <Route path="/DSP" element={<DSP />} />
+          <Route path="/FFT" element={<FFT />} />
+          <Route path="/Ztransform" element={<Ztransform />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/research" element={<Research />} />
+          <Route path="/personal" element={<Personal />} />
+        </Routes>
+      </HashRouter>
       <Footer />
     </Router>
   )
