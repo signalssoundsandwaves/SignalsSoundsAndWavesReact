@@ -1,5 +1,5 @@
-// src/pages/Why.jsx
-function Why() {
+// src/pages/SignalsSoundsWaves.jsx
+function SignalsSoundsWaves() {
   return (
     <div className="container my-5">
 
@@ -182,4 +182,4 @@ function Why() {
   );
 }
 
-export default Why;
+export default SignalsSoundsWaves;

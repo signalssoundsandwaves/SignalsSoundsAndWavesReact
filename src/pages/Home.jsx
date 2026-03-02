@@ -16,9 +16,9 @@ function Home() {
       link: { to: '/Cv', label: 'My CV..' },
     },
     {
-      title: 'Why Signals Sounds And Waves?',
-      text: 'Signals, Sounds and Waves — sounds snappy right? Well, there\'s more to it than that. Here I\'ll talk about what the terms mean in the context of a typical recording setup, and link to lots of useful information.',
-      link: { to: '/Why', label: 'Read more..' },
+      title: 'DSP Concepts Explained',
+      text: 'Signals, Sounds and Waves — sounds snappy right? Well, there\'s more to it than that. Here I\'ll talk about Digital Signal Processing concepts in the context of a typical recording setup, and link to lots of useful information.',
+      link: { to: '/DSP', label: 'Read more..' },
     },
     {
       title: 'Plugins!',
