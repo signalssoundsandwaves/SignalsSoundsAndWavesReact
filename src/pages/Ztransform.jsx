@@ -56,8 +56,7 @@ function Ztransform() {
                                 <img
                                     src="/a_clean_technical_diagram_of_the_complex_z_plane.png"
                                     alt="Complex Z Plane showing unit circle and DFT region of convergence"
-                                    className="img-fluid"
-                                    style={{ maxWidth: "600px" }}
+                                    className="img-img-fluid w-50 d-block mx-auto"
                                 />
                             </div>
 
