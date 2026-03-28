@@ -167,9 +167,8 @@ function SignalsSoundsWaves() {
                 <p>
                   Figure 1 shows an analog signal — continuous in time and amplitude.
                   To represent it digitally, an Analog-to-Digital Converter (ADC)
-                  takes discrete time samples (Figure 2) and then quantizes the amplitude
-                  into specific levels (Figure 3). The number of available levels is
-                  determined by the bit depth.
+                  takes discrete time samples, a typical rock song might be recorded at 44100 samples per second (see figure 2). The amplitude
+                  is then quantized to specific levels, with the number of available levels determined by the bit depth, a 16-bit depth allows for 65536 levels (Figure 3).
                 </p>
               </div>
 
