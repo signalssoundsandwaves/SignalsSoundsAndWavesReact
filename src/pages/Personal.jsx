@@ -20,6 +20,12 @@ function Personal() {
       image: '/bazzfuss.png',
       imagePosition: 'float-end',
     },
+    {
+      title: 'Machine Learning Projects',
+      text: 'I have applied various machine learning algorithms and models to different datasets.',
+      externalLink: { href: 'https://github.com/signalssoundsandwaves/MachineLearningNotebooks', label: 'View project..' },
+      imagePosition: 'float-end',
+    },
   ];
 
   useEffect(() => {
