@@ -23,7 +23,6 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <CursorRadar />
       <MyNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
